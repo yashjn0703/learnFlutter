@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:test_one/utils/routes.dart';
 
@@ -9,6 +11,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String name = "";
+  bool changeButton = false;
+
   @override
   Widget build(BuildContext context) {
 
@@ -54,20 +58,40 @@ class _LoginPageState extends State<LoginPage> {
                  SizedBox(
                    height: 40,
                  ),
+                InkWell(
+                  onTap: () async{
+                    setState(() {
+                      changeButton = true;
+                    });
 
-                Container(
-                  height: 50,
-                  width: 150,
-                  color: Colors.deepPurple,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
+                    await Future.delayed(Duration(seconds: 1));
+                    Navigator.pushNamed(context, MyRoutes.homeRoute);
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(seconds: 1),
+                    height: 50,
+                    width: changeButton? 50:150,
+                    alignment: Alignment.center,
+                    child: changeButton
+                    ? Icon(
+                      Icons.done,
                       color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                    fontSize: 18),
+                    )
+                    :Text(
+                      "Login",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                      //shape: changeButton? BoxShape.circle : BoxShape.rectangle,
+                      borderRadius: changeButton? BorderRadius.circular(50) : BorderRadius.circular(8),
+                    ),
                   ),
                 )
+
 
                 /* ElevatedButton(
                    onPressed: (){
