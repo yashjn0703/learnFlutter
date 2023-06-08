@@ -22,12 +22,13 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.deepPurple,
       fontFamily: GoogleFonts.lato().fontFamily,
       ),
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
       initialRoute: "/",
       routes: {
-        "/" : (context) => LoginPage(),
+        "/" : (context) => HomePage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => HomePage(),
       },
