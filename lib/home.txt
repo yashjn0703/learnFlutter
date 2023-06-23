@@ -35,3 +35,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+--no-sound-null-safety
