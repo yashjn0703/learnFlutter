@@ -1,0 +1,76 @@
+{
+  "products" : [
+    {
+      "id": 1,
+      "name": "Iphone 12",
+      "desc": "Bhai waah waah waah",
+      "price": 999,
+      "color": "#33505a",
+      "image":
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+    },
+    {
+      "id": 2,
+      "name": "Pixel 5",
+      "desc": "Bhai waah waah waah",
+      "price": 800,
+      "color": "#33505a",
+      "image":
+      "https://i.insider.com/5f9088f8212113001873ffca?width=1000&format=jpeg&auto=webp"
+    },
+    {
+      "id": 3,
+      "name": "M1 Book Air",
+      "desc": "Bhai waah waah waah",
+      "price": 999,
+      "color": "#33505a",
+      "image":
+      "https://www.aptronixindia.com/media/catalog/product/cache/31f0162e6f7d821d2237f39577122a8a/1/3/13_inch_macbook_air_cto_fileminimizer__1_1_.png"
+    },
+    {
+      "id": 4,
+      "name": "Samsung S21",
+      "desc": "Bhai waah waah waah",
+      "price": 999,
+      "color": "#33505a",
+      "image":
+      "https://m.media-amazon.com/images/I/614n6dbzqtL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lenovo Ideapad",
+      "desc": "Bhai waah waah waah",
+      "price": 795,
+      "color": "#33505a",
+      "image":
+      "https://cdn1.smartprix.com/rx-ioHWWnCOJ-w1200-h1200/oHWWnCOJ.jpg"
+    },
+    {
+      "id": 6,
+      "name": "HP pavallion",
+      "desc": "Bhai waah waah waah",
+      "price": 820,
+      "color": "#33505a",
+      "image":
+      "https://cdn1.smartprix.com/rx-ixUZqmGQy-w1200-h1200/xUZqmGQy.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Samsung Note 10",
+      "desc": "Bhai waah waah waah",
+      "price": 999,
+      "color": "#33505a",
+      "image":
+      "https://i.gadgets360cdn.com/products/large/samsung-galaxy-note-10-plus-412x800-1565201367.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Ipad pro",
+      "desc": "Bhai waah waah waah",
+      "price": 949,
+      "color": "#33505a",
+      "image":
+      "https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_UF1000,1000_QL80_.jpg"
+    }
+  ]
+}
