@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:test_one/core/store.dart';
+import 'package:test_one/models/cart.dart';
 import 'dart:convert';
 import 'package:test_one/models/catalog.dart';
 import 'package:test_one/utils/routes.dart';
@@ -44,14 +46,24 @@ class _HomePageState extends State<HomePage> {
 
 
   Widget build(BuildContext context) {
-    final int days = 77;
-    final String name = "Yash";
-
-
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-        child: Icon(CupertinoIcons.cart),
+      floatingActionButton: VxBuilder(
+        mutations: {AddMutation, RemoveMutation},
+        builder: (context, dynamic _, VxStatus? __) {
+          return FloatingActionButton(
+            onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+            child: Icon(CupertinoIcons.cart),
+          ).badge(
+              color: Colors.red ,
+              size: 22,
+              count: _cart.items.length,
+              textStyle: TextStyle(
+                color: MyTheme.creamColor,
+                fontWeight: FontWeight.bold,
+              )
+          );
+        }
       ),
       backgroundColor: context.canvasColor,
         body: SafeArea(
