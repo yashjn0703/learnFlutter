@@ -8,8 +8,10 @@ class CatalogModel{
 
   Item getByPos(int pos) => items[pos];
 }
-
-
+// Category:
+// phones -> 1
+//laptops -> 2
+// tablets -> 3
 class Item{
   final int id;
   final String name;
@@ -17,13 +19,17 @@ class Item{
   final num price;
   final String color;
   final String image;
+  final int category;
+  int quant;
 
   Item({required this.id,
     required this.name,
     required this.desc,
     required this.price,
     required this.color,
-    required this.image});
+    required this.image,
+  required this.quant,
+  required this.category});
 
   factory Item.fromMap(Map<String,dynamic> map){
     return Item(
@@ -33,6 +39,8 @@ class Item{
       price: map['price'],
       color: map['color'],
       image: map['image'],
+      quant: map['quant'],
+      category: map['category']
     );
   }
 
@@ -43,6 +51,8 @@ class Item{
     "price": price,
     "color": color,
     "image": image,
+    "quant" : quant,
+    "category" : category
   };
 
 

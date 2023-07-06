@@ -7,7 +7,9 @@
       "price": 999,
       "color": "#33505a",
       "image":
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc",
+      "quant": 1,
+      "category" : 1
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "price": 800,
       "color": "#33505a",
       "image":
-      "https://i.insider.com/5f9088f8212113001873ffca?width=1000&format=jpeg&auto=webp"
+      "https://i.insider.com/5f9088f8212113001873ffca?width=1000&format=jpeg&auto=webp",
+      "quant": 1,
+      "category" : 1
     },
     {
       "id": 3,
@@ -25,7 +29,9 @@
       "price": 999,
       "color": "#33505a",
       "image":
-      "https://www.aptronixindia.com/media/catalog/product/cache/31f0162e6f7d821d2237f39577122a8a/1/3/13_inch_macbook_air_cto_fileminimizer__1_1_.png"
+      "https://www.aptronixindia.com/media/catalog/product/cache/31f0162e6f7d821d2237f39577122a8a/1/3/13_inch_macbook_air_cto_fileminimizer__1_1_.png",
+      "quant": 1,
+      "category" : 2
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "price": 999,
       "color": "#33505a",
       "image":
-      "https://m.media-amazon.com/images/I/614n6dbzqtL._AC_UF894,1000_QL80_.jpg"
+      "https://m.media-amazon.com/images/I/614n6dbzqtL._AC_UF894,1000_QL80_.jpg",
+      "quant": 1,
+      "category" : 1
     },
     {
       "id": 5,
@@ -43,7 +51,9 @@
       "price": 795,
       "color": "#33505a",
       "image":
-      "https://cdn1.smartprix.com/rx-ioHWWnCOJ-w1200-h1200/oHWWnCOJ.jpg"
+      "https://cdn1.smartprix.com/rx-ioHWWnCOJ-w1200-h1200/oHWWnCOJ.jpg",
+      "quant": 1,
+      "category" : 2
     },
     {
       "id": 6,
@@ -52,7 +62,9 @@
       "price": 820,
       "color": "#33505a",
       "image":
-      "https://cdn1.smartprix.com/rx-ixUZqmGQy-w1200-h1200/xUZqmGQy.jpg"
+      "https://cdn1.smartprix.com/rx-ixUZqmGQy-w1200-h1200/xUZqmGQy.jpg",
+      "quant": 1,
+      "category" : 2
     },
     {
       "id": 7,
@@ -61,7 +73,9 @@
       "price": 999,
       "color": "#33505a",
       "image":
-      "https://i.gadgets360cdn.com/products/large/samsung-galaxy-note-10-plus-412x800-1565201367.jpg"
+      "https://i.gadgets360cdn.com/products/large/samsung-galaxy-note-10-plus-412x800-1565201367.jpg",
+      "quant": 1,
+      "category" : 1
     },
     {
       "id": 8,
@@ -70,7 +84,9 @@
       "price": 949,
       "color": "#33505a",
       "image":
-      "https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_UF1000,1000_QL80_.jpg"
+      "https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_UF1000,1000_QL80_.jpg",
+      "quant": 1,
+      "category" : 3
     }
   ]
 }

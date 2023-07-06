@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:test_one/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+import '../utils/routes.dart';
 
 
 class MyDrawer extends StatelessWidget {
@@ -14,43 +18,67 @@ class MyDrawer extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
+           DrawerHeader(
               padding: EdgeInsets.zero,
-              child: UserAccountsDrawerHeader(
-                  margin: EdgeInsets.zero,
-                  accountName: Text("Yash Jain"),
-                  accountEmail: Text("yashjn0703@gmail.com"),
-                  currentAccountPicture: CircleAvatar(
-                    backgroundImage: NetworkImage(imageUrl),
-                  )
-              ),),
+              child:
+              Container(
+                width: double.infinity,
+                  child: Image.asset("assets/images/landscape.jpg",
+                  fit: BoxFit.fill,),
+              ),
+           ),
             ListTile(
-              leading: Icon(CupertinoIcons.home, color: Colors.white,),
+              leading: IconButton(
+                icon: Icon(Icons.home, color: Colors.white,),
+                onPressed: (){
+                  Navigator.pushNamed(context, MyRoutes.homeRoute);
+                },
+              ),
               title: Text(
                   "Home",
               textScaleFactor: 1.2,
               style: TextStyle(
                 color: Colors.white
               ),),
+              onTap: (){
+                Navigator.pushNamed(context, MyRoutes.homeRoute);
+              },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.profile_circled, color: Colors.white,),
+              leading: IconButton(
+                icon: Icon(Icons.account_circle_outlined, color: Colors.white,),
+                onPressed: (){
+                  Navigator.pushNamed(context, MyRoutes.loginRoute);
+                },
+              ),
               title: Text(
-                "Profile",
+                "Log In",
                 textScaleFactor: 1.2,
                 style: TextStyle(
                     color: Colors.white
                 ),),
+              onTap: (){
+                Navigator.pushNamed(context, MyRoutes.loginRoute);
+              },
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.mail, color: Colors.white,),
+              leading: IconButton(
+                icon: Icon(Icons.shopping_cart, color: Colors.white,),
+                onPressed: (){
+                  Navigator.pushNamed(context, MyRoutes.cartRoute);
+                },
+              ),
               title: Text(
-                "Email me",
+                "Cart",
                 textScaleFactor: 1.2,
                 style: TextStyle(
                     color: Colors.white
                 ),),
+              onTap: (){
+                Navigator.pushNamed(context, MyRoutes.cartRoute);
+              },
             ),
+
           ],
         ),
       )

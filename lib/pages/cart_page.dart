@@ -30,9 +30,14 @@ class CartPage extends StatelessWidget {
 }
 
 
-class _CartTotal extends StatelessWidget {
+class _CartTotal extends StatefulWidget {
   const _CartTotal({Key? key}) : super(key: key);
 
+  @override
+  State<_CartTotal> createState() => _CartTotalState();
+}
+
+class _CartTotalState extends State<_CartTotal> {
   @override
   Widget build(BuildContext context) {
     final CartModel _cart = (VxState.store as MyStore).cart;
@@ -64,8 +69,13 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class _CartList extends StatelessWidget {
+class _CartList extends StatefulWidget {
 
+  @override
+  State<_CartList> createState() => _CartListState();
+}
+
+class _CartListState extends State<_CartList> {
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [RemoveMutation]);
@@ -75,14 +85,29 @@ class _CartList extends StatelessWidget {
       : ListView.builder(
         itemCount: _cart.items?.length,
         itemBuilder: (context, index) =>ListTile(
-          leading: Icon(Icons.done),
+          leading: IconButton(
+            icon: Icon(Icons.add_circle),
+            onPressed: () {
+              _cart.items[index].quant ++ ;
+              print(_cart.items[index].quant);
+              setState(() {});
+            },
+          ),
           trailing: IconButton(
             icon: Icon(Icons.remove_circle),
-            onPressed: () => RemoveMutation(_cart.items[index]),
+            onPressed: () {
+              if(_cart.items[index].quant > 1){
+                _cart.items[index].quant --;
+                setState(() {});
+              }else{
+                RemoveMutation(_cart.items[index]);
+              }
+            }
               //setState(() {});
 
           ),
-          title: _cart.items[index].name.text.make(),
+          title:"${_cart.items[index].quant} ${_cart.items[index].name}".text.make()
+          //_cart.items[index].name.text.make()+ _cart.items[index].quant.text.make(),
         )
     );
   }

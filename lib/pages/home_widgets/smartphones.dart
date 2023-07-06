@@ -11,7 +11,7 @@ import 'addToCart.dart';
 import 'catalog_image.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class CatalogList extends StatelessWidget {
+class PhoneList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return !context.isMobile
@@ -22,28 +22,30 @@ class CatalogList extends StatelessWidget {
         itemCount: CatalogModel.items.length,
         itemBuilder: (context, index){
           final catalog = CatalogModel.items[index];
-          return InkWell(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder:
-                (context)=> HomePageDetail(catalog: catalog)
-            )
-            ),
-            child: CatalogItem(catalog: catalog),
-          ) ;
-            
+          if(CatalogModel.items[index].category == 1){
+            return InkWell(
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder:
+                  (context)=> HomePageDetail(catalog: catalog)
+              )
+              ),
+              child: CatalogItem(catalog: catalog),
+            ) ;
+          }
         }
     ): ListView.builder(
         shrinkWrap: true,
         itemCount: CatalogModel.items.length,
         itemBuilder: (context, index){
           final catalog = CatalogModel.items[index];
-          return InkWell(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder:
-                (context)=> HomePageDetail(catalog: catalog)
-            )
-            ),
-            child: CatalogItem(catalog: catalog),
-          ) ;
-
+          if(CatalogModel.items[index].category == 1){
+            return InkWell(
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder:
+                  (context)=> HomePageDetail(catalog: catalog)
+              )
+              ),
+              child: CatalogItem(catalog: catalog),
+            ) ;
+          }
         }
     );
   }
@@ -59,25 +61,25 @@ class CatalogItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var children2 = [
-            Hero(tag: Key(catalog.id.toString()), child: CatalogImage(image: catalog.image)),
-            Expanded(child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
-                catalog.desc.text.textStyle(context.captionStyle).make(),
-                10.heightBox,
-                ButtonBar(
-                  alignment: MainAxisAlignment.spaceBetween,
-                  buttonPadding: EdgeInsets.zero,
-                  children: [
-                    "\$${catalog.price}".text.bold.xl.make(),
-                    AddtoCart(catalog: catalog),
-                  ],
-                ).pOnly(right: 8.0)
-              ],
-            ).p(context.isMobile?0:16)
-            )
+      Hero(tag: Key(catalog.id.toString()), child: CatalogImage(image: catalog.image)),
+      Expanded(child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+          catalog.desc.text.textStyle(context.captionStyle).make(),
+          10.heightBox,
+          ButtonBar(
+            alignment: MainAxisAlignment.spaceBetween,
+            buttonPadding: EdgeInsets.zero,
+            children: [
+              "\$${catalog.price}".text.bold.xl.make(),
+              AddtoCart(catalog: catalog),
+            ],
+          ).pOnly(right: 8.0)
+        ],
+      ).p(context.isMobile?0:16)
+      )
     ];
     return VxBox(
         child: context.isMobile? Row(

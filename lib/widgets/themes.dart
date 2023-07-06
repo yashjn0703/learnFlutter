@@ -40,5 +40,6 @@ class MyTheme {
   static Color darkcreamColor = Vx.gray900;
   static Color darkBluishColor = Color(0xff403b58);
   static Color lightBluishColor = Vx.indigo500;
+  static Color mint = Color.fromRGBO(170, 240, 209, 100);
 
 }
